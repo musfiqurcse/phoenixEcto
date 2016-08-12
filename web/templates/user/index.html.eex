@@ -1,0 +1,26 @@
+<h1> Watch User</h1>
+  <table class="table table-bordered table-responsive">
+    <tr>
+  <th>
+    Name
+  </th>
+  <th>
+    Details
+  </th>
+  <th>
+    Age
+  </th>
+  <th>
+    Action
+  </th>
+    </tr>
+  <%= for user <- @users do %>
+  <tr>
+  <td><b><%= user.name %></b></td>
+    <td><b><%= user.details %></b></td>
+    <td><b><%= user.age %></b></td>
+   <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
+  </tr>
+  <%= end %>
+  <%= link "create a new user", to: user_path(@conn, Ectoservice.Controller.User,:new) %>
+</table>
