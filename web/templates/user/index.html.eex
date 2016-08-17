@@ -22,5 +22,5 @@
    <td><%= link "View", to: user_path(@conn, :show, user.id) %></td>
   </tr>
   <%= end %>
-  <%= link "create a new user", to: user_path(@conn, Ectoservice.Controller.User,:new) %>
+  <%= link "create a new user", to: user_path(@conn, :new) %>
 </table>
