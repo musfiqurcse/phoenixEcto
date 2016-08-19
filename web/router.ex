@@ -22,6 +22,10 @@ defmodule Ectoservice.Router do
     get "/users/:id", UserController, :show
     resources "/sessions", SessionController, only: [:new, :create, :delete]
   end
+  scope "/api", Ectoservice do
+    pipe_through :browser
+    get "/api/user", UserController, :allUser
+  end
 
   # Other scopes may use custom stacks.
   # scope "/api", Ectoservice do

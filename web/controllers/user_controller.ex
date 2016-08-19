@@ -13,6 +13,9 @@ defmodule Ectoservice.UserController do
       |> halt()
     end
   end
+  def allUser(conn, _params)do
+    json conn,Poison.Encode.encode!(Repo.all(User))
+  end
 
   def index(conn, _params) do
     #case authenticate conn do

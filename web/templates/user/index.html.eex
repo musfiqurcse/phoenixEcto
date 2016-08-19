@@ -24,3 +24,11 @@
   <%= end %>
   <%= link "create a new user", to: user_path(@conn, :new) %>
 </table>
+
+
+
+    <input type="button" name="show" id="show" value="Show Details" class="btn btn-group">
+
+
+
+ <script src="<%=  static_path(@conn, "/js/vendor1.js") %>"></script> 
